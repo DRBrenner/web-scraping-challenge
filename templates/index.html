@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <style>
+    #1 {
+      margin-top: 10mm
+    } -->
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 bg-blue box">
+        <h1 class="textcenter">MISSION TO MARS</h1>
+        <p class="textcenter">This assignment involved scraping images, news, and data from multiple webpages about
+          Mars.
+          Click here to scrape new information.
+        </p>
+        <p><a class="btn btn-primary btn-lg centerImage textBlack plots " href="/scrape" role="button"=>Scrape
+            New Data!</a></p>
+      </div>
+    </div>
+    <div class="row newSection">
+      <div class="col-md-8">
+        <h3>Lastest News</h3>
+        <h6>insert {{ mars.news_title }}</h6>
+        <p>insert {{ mars.news_p }}</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3>Current Weather on Mars</h3>
+        <p>insert {{mars.mars_weather}}</p>
+      </div>
+
+     </div>
+
+     <div class="row newSection">
+        <div class="col-md-8">
+          <h3>Featured Image of Mars</h3>
+          <p>insert {featured_image_url}</p>
+          <img src="{{ mars.featured_img_url }}" alt="Featured Mars image">
+        </div>
+  
+        <div class="col-md-4">
+          <h3>Facts about Mars</h3>
+          <!-- <a src="table.html"></a> -->
+          {{mars.table_df| safe}}
+          <p>insert {table.html}</p>
+        </div>
+  
+       </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <h6>Images of Mars' Hemispheres from the USGS Astrogeology site</h6>
+      </div>
+    </div>
+  </div>
+  <div class="row plots"><br><br>
+    <div class="col-md-6 col-xs-12 col-sm-12">
+      <div class="text-center">
+        <h4 class="caption" id="1">Cerberus Hemisphere</h4>
+        <p></p>
+        <a><img class="img-responsive"
+            src="https://astrogeology.usgs.gov/cache/images/cfa62af2557222a02478f1fcd781d445_cerberus_enhanced.tif_full.jpg"
+            alt="..." width="90%"></a>
+        <div class="caption text-center">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12 col-sm-12">
+      <div class="caption text-center">
+        <h4 margin-top="30px">Schiaparelli Hemisphere</h4>
+        <p></p>
+        <a><img
+            src="https://astrogeology.usgs.gov/cache/images/3cdd1cbf5e0813bba925c9030d13b62e_schiaparelli_enhanced.tif_full.jpg"
+            alt="..." width="90%"></a>
+      </div>
+    </div>
+  </div>
+  <div class="row plots">
+    <div class="col-md-6 col-xs-12 col-sm-12">
+      <div class="caption text-center">
+        <h4>Syrtis Major Hemisphere</h4>
+        <p></p>
+        <a><img
+            src="https://astrogeology.usgs.gov/cache/images/ae209b4e408bb6c3e67b6af38168cf28_syrtis_major_enhanced.tif_full.jpg"
+            alt="..." width="90%"></a>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12 col-sm-12">
+      <div class="caption text-center">
+        <h4>Valles Marineris Hemisphere</h4>
+        <p></p>
+        <a href="lat_v_humidity.html"><img
+            src="https://astrogeology.usgs.gov/cache/images/7cf2da4bf549ed01c17f206327be4db7_valles_marineris_enhanced.tif_full.jpg"
+            alt="..." width="90%"></a>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
