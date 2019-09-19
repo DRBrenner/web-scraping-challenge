@@ -71,7 +71,7 @@ def scrape_info():
     table_df = table_df.rename(columns = {0:"Fact",1:"Value"}).set_index("Fact")
     table_df
 
-    table_html = table_df.to_html("table.html")
+    table_html = table_df.to_html()#("table.html")
 
 
     # Save full jpg Mars hemisphere images to a dictionary
